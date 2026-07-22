@@ -4,48 +4,50 @@ import { motion } from "framer-motion";
 
 export default function HeroContent() {
   return (
-    <div className="relative z-20 mx-auto flex min-h-screen max-w-7xl items-center px-6">
-      <div className="max-w-2xl">
+    <div className="mx-auto flex min-h-screen max-w-7xl items-center px-8">
+
+      {/* LEFT SIDE */}
+      <div className="w-full lg:w-1/2">
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-green-600"
+          className="mb-4 text-green-600 font-bold tracking-[0.35em]"
         >
-          Renewable Energy Solutions
+          CLEAN ENERGY • SMART INVESTMENT
         </motion.p>
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="mb-6 text-5xl font-extrabold leading-tight text-gray-900 md:text-7xl"
+          transition={{ delay: 0.3 }}
+          className="text-6xl font-black leading-tight text-gray-900"
         >
           Power Your Future
           <br />
-          With Renewable Energy
+          With Renewable
+          <br />
+          Energy
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
-          className="mb-10 text-lg leading-8 text-gray-700"
+          className="mt-8 max-w-xl text-xl leading-9 text-gray-700"
         >
-          Solar • Wind • Energy Storage
-          <br />
-          Smart renewable energy solutions for homes,
-          businesses and industries.
+          Solar, wind and smart energy solutions designed to
+          reduce electricity bills while building a cleaner future.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
-          className="flex flex-wrap gap-5"
+          className="mt-10 flex gap-5"
         >
-          <button className="rounded-full bg-green-600 px-8 py-4 font-semibold text-white shadow-lg transition hover:-translate-y-1 hover:bg-green-700">
+          <button className="rounded-full bg-green-600 px-8 py-4 font-semibold text-white shadow-lg transition hover:bg-green-700">
             Get Free Consultation
           </button>
 
@@ -55,6 +57,10 @@ export default function HeroContent() {
         </motion.div>
 
       </div>
+
+      {/* RIGHT SIDE - Reserved for our animated renewable energy scene */}
+      <div className="hidden lg:block lg:w-1/2" />
+
     </div>
   );
 }
